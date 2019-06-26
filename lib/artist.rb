@@ -22,14 +22,14 @@ class Artist
   end 
   
  def self.create_by_name(name)
-     song = self.new
-     song.name = name 
-     song.save 
-     song
+     artist = self.new
+     artist.name = name 
+     artist.save 
+     artist
    end
    
    def self.find_by_name(name)
-     self.all.find{|song| song.name == name}
+     self.all.find{|artist| artist.name == name}
    end 
   def self.find_or_create_by_name(name)
     self.find_by_name(name) || self.create_by_name(name)
