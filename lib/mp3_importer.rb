@@ -8,6 +8,7 @@ class MP3Importer
   def files
     Dir[@path+"/*.mp3"].map do |file|
       file.split("/").last
+    end 
    end 
     
   def import(list_of_filenames)
